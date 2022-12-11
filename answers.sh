@@ -30,3 +30,20 @@ SET Points = 100
 WHERE Name = "Alex" AND Points = 200
 
 
+# Creating Table
+ CREATE TABLE graduates (
+ID INTEGER NOT NULL PRIMARY KEY,
+name TEXT NOT NULL UNIQUE,
+Age INTEGER,
+Gender TEXT,
+Points INTEGER,
+graduation TEXT
+);
+
+# after Creating Table
+INSERT INTO graduates (ID, Name, Age, Gender, Points)
+SELECT 4, "Layla", "18", "F", 350 FROM students
+WHERE ID = 4
+
+DELETE FROM students WHERE
+ID=4
