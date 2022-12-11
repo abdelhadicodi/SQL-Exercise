@@ -56,3 +56,24 @@ companyname TEXT NOT NULL,
 companydate TEXT NOT NULL
 );
 
+# Count & Filter
+# 1
+SELECT students.Name FROM students
+WHERE Points=(
+SELECT max(Points)
+FROM students)
+
+# 2
+SELECT avg(Points)
+FROM students
+
+# 3
+SELECT count (Points) as total FROM "students"
+WHERE students.Points = 500
+
+# 4
+SELECT Name FROM students
+WHERE students.Name like "%s%"
+
+# 5
+SELECT * FROM students ORDER by Points DESC
