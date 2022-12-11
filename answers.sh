@@ -47,3 +47,12 @@ WHERE ID = 4
 
 DELETE FROM students WHERE
 ID=4
+
+
+# Joins
+CREATE TABLE employee_company(
+name TEXT NOT NULL,
+companyname TEXT NOT NULL,
+companydate TEXT NOT NULL
+);
+
